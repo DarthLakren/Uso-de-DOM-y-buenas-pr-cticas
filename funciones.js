@@ -1,6 +1,10 @@
-function crearTablas(){
+function leerDatos(){
     let filas = document.getElementById("filas").value;
     let columnas = document.getElementById("columnas").value;
+    crearTablas(filas, columnas);
+}
+
+function crearTablas(filas, columnas){
     let codigo = "";
     codigo = codigo + "<table border='1'>";
     for(let x = 0; x<filas; x++){
