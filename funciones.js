@@ -1,7 +1,12 @@
 function leerDatos(){
     let filas = document.getElementById("filas").value;
     let columnas = document.getElementById("columnas").value;
-    crearTablas(filas, columnas);
+
+    if (filas <= 0 || columnas <= 0) {
+        alert("Por favor, ingresa valores numéricos mayores que 0 para filas y columnas.");
+        return;
+    }
+ crearTablas(filas, columnas);
 }
 
 function crearTablas(filas, columnas){
