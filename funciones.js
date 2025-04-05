@@ -1,5 +1,8 @@
 
 import { crearTablas } from"./funcionesAvanzadas.js";
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("crear").addEventListener("click", leerDatos);
+});
 function leerDatos(){
     try{
         let filas = document.getElementById("filas").value;
