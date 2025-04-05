@@ -10,17 +10,20 @@ function leerDatos(){
 }
 
 function crearTablas(filas, columnas){
-    let codigo = "";
-    codigo = codigo + "<table border='1'>";
+    let contenedor = document.getElementById("tabla");
+    contenedor.innerHTML = "";
+    
+    // Crear la tabla
+    let tabla = document.createElement("table");
+    tabla.setAttribute("border", "1");
+
     for(let x = 0; x<filas; x++){
-        codigo= codigo + "<tr>";
+        let fila = document.createElement("tr");
         for(let y = 0; y<columnas; y++){
-            codigo= codigo + "<td>"
-            codigo= codigo + "</td>"
+            let celda = document.createElement("td");
+            fila.appendChild(celda);
         }
-        codigo= codigo + "</tr>";
+        tabla.appendChild(fila);
     }
-    codigo = codigo + "</table>";
-    console.log(codigo);
-    document.getElementById("tabla").innerHTML=codigo;
+    contenedor.appendChild(tabla);
 }
